@@ -7,7 +7,7 @@ Exemplo de utilização da ferramenta [Site 321](https://www.site321.com.br) e [
 
 - Framework [Middleman](https://middlemanapp.com/)
 - Tema / Layout [Freelancer](http://blackrockdigital.github.io/startbootstrap-freelancer/)
-- CMS [Site 321](https://www.site321.com)
+- CMS [Site 321](https://www.site321.com.br)
 
 
 
