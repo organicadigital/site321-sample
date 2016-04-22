@@ -1,0 +1,28 @@
+---
+- id: 2930a49b-9617-4b17-9853-b80ce2406063
+  label: Projetos
+  title: Projetos
+  url: "#portfolio"
+  target: _self
+  page_template: 
+  page: 
+  parent_id: 
+  position: 1
+- id: ac71ec0e-5e60-45b4-9fe9-f9192bb09ea9
+  label: Sobre
+  title: Sobre mim
+  url: "#about"
+  target: _self
+  page_template: 
+  page: 
+  parent_id: 
+  position: 1
+- id: ced5e0c2-7cf8-4844-b5db-725860151ac4
+  label: Contato
+  title: Entre em contato comigo
+  url: "#contact"
+  target: _self
+  page_template: 
+  page: 
+  parent_id: 
+  position: 1

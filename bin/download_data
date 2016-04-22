@@ -28,6 +28,8 @@ resources.with_progress('=> Downloading data...') do |resource|
     content = JSON.parse(open(uri).read)
     file_name = File.join(data_dir, "#{resource}.yml")
 
+    content = content['items'] if content.is_a?(Hash) && content['items']
+
     FileUtils.mkdir_p(File.dirname(file_name))
 
     File.write(file_name, content.to_yaml)

@@ -1,0 +1,9 @@
+---
+- name: Empresa Foo Bar
+  id: f7a7646d-0800-4848-9627-02d8d977ebcc
+  created_at: '2016-04-22T12:02:20.974-03:00'
+  updated_at: '2016-04-22T12:02:20.974-03:00'
+- name: Empresa XYZ
+  id: 43f025cf-3201-4417-8211-4e58e7fec18d
+  created_at: '2016-04-22T12:02:11.604-03:00'
+  updated_at: '2016-04-22T12:02:11.604-03:00'
