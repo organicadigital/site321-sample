@@ -11,3 +11,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
+
+# Download data dependencies
+gem 'progress', '~> 3.1', '>= 3.1.1', require: false

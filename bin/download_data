@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require 'open-uri'
+require 'yaml'
+require 'fileutils'
+require 'progress'
+require 'json'
+
+token = ENV.fetch('TOKEN')
+
+api_uri = URI.join('http://beta.site321.com.br/api/v2/', token)
+
+data_config_file = File.expand_path('../../.site321-data.yml', __FILE__)
+
+resources = YAML.load_file(data_config_file)
+
+unless resources && resources.is_a?(Array)
+  abort("=> #{data_config_file} is not valid")
+end
+
+data_dir = File.expand_path('../../data', __FILE__)
+FileUtils.mkdir_p(data_dir)
+
+resources.with_progress('=> Downloading data...') do |resource|
+  uri = URI.join("#{api_uri}/", resource)
+
+  begin
+    content = JSON.parse(open(uri).read)
+    file_name = File.join(data_dir, "#{resource}.yml")
+
+    FileUtils.mkdir_p(File.dirname(file_name))
+
+    File.write(file_name, content.to_yaml)
+  rescue OpenURI::HTTPError => e
+    puts "=> Error on download #{resource} => #{e.message}"
+  end
+end
